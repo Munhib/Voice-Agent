@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from livekit import agents 
 from livekit.agents import Agent, AgentServer, AgentSession, JobContext, room_io
 from livekit.plugins import noise_cancellation, silero 
+from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
 load_dotenv()
 
@@ -22,6 +23,8 @@ async def entrypoint (ctx: JobContext):
         llm ="openai/gpt-4.1-mini",
         tts= "cartesia/sonic-3",
         vad=silero.VAD.load(),
+        turn_detector=MultilingualModel(),
+
     )
 
     await session.start(
