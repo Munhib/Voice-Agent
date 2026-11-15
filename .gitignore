@@ -1,0 +1,5 @@
+Demo/livekit-voice-agent/.env
+Demo/livekit-voice-agent/uv.lock
+tools/uv/uv.exe
+tools/uv/uvw.exe
+tools/uv/uvx.exe
