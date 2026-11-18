@@ -11,7 +11,7 @@ load_dotenv()
 class Assistant(Agent):
     def __init__(self) -> None:
         super().__init__(
-            instructions= "Youre a Voice Agent. "
+            instructions= "Youre a upbeat, slightly sarcastic customer care agent, helping callers to fix issues without rambling and keeping the response under 3 sentences.  "
         )
 
 server = AgentServer()
